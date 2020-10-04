@@ -2,17 +2,18 @@ const vscode = require('vscode');
 const editor = vscode.window.activeTextEditor;
 
 
-function GetSelectedText() {
+async function GetSelectedText() {
 	let decorations = [];
-	const text = editor.document.getText(editor.selection);
+	let text = editor.document.getText(editor.selection);
 	let decoded = unicodeToChar(text);
 	decorations.push(editor.selection)
+
+	let style = vscode.window.createTextEditorDecorationType({ color: "white", backgroundColor: "#cf6a87" });
+	editor.setDecorations(style, decorations);
+
 	editor.edit(function (editBuilder) {
 		editBuilder.replace(editor.selection, decoded);
 	});
-	
-	const style = vscode.window.createTextEditorDecorationType({ color: "white", backgroundColor: "#cf6a87" });
-	editor.setDecorations(style, decorations);
 }
 
 function unicodeToChar(text) {
@@ -24,7 +25,7 @@ function unicodeToChar(text) {
 
 function activate(context) {
 	console.log('Congratulations, your extension "udecoder" is now active!');
-	let disposable = vscode.commands.registerCommand('udecoder.helloWorld', function () {
+	let disposable = vscode.commands.registerCommand('udecoder.decode', function () {
 		GetSelectedText();
 	});
 

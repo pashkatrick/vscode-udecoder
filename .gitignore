@@ -3,3 +3,4 @@ test/
 .eslintrc.json
 .vscode/
 .vscodeignore
+vscode-udecoder-*
