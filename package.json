@@ -1,23 +1,45 @@
 {
-	"name": "udecoder",
-	"displayName": "udecoder",
-	"description": "",
+	"name": "vscode-udecoder",
+	"displayName": "Udecoder",
+	"publisher": "pashkatrick",
+	"description": "VSCode unicode decoder",
+	"author": {
+        "name": "pashkatrick",
+        "email": "me@pshktrck.ru"
+	},
+	"license": "MIT",
+	"icon": "img/icon.png",
+    "bugs": {
+        "url": "https://github.com/pashkatrick/vscode-udecoder/issues",
+        "email": "me@pshktrck.ru"
+    },
+    "homepage": "https://github.com/pashkatrick/vscode-udecoder/blob/master/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pashkatrick/vscode-udecoder.git"
+    },
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.49.0"
 	},
-	"categories": [
-		"Other"
-	],
+    "categories": [
+        "Other",
+        "Snippets"
+    ],
+    "keywords": [
+        "Unicode",
+        "Encode",
+        "Editor"
+      ],
 	"activationEvents": [
-		"onCommand:udecoder.helloWorld"
+		"onCommand:udecoder.decode"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "udecoder.helloWorld",
-				"title": "Hello World"
+				"command": "udecoder.decode",
+				"title": "Udecoder: decode"
 			}
 		]
 	},
