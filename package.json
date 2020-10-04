@@ -18,7 +18,7 @@
         "type": "git",
         "url": "https://github.com/pashkatrick/vscode-udecoder.git"
     },
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.49.0"
 	},
