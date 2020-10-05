@@ -1,5 +1,10 @@
 # Get Started 🚀
+After install the plugin, you need to: 
+- select text part with unicoded symbols
+- `cmd + shift + p` and find `udecoder: decode` command
+- that's it
 
+![example](/img/example.gif)
 
 ## ChangeLog
 See CHANGELOG [here](CHANGELOG.md)
