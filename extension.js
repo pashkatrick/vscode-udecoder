@@ -24,7 +24,6 @@ function unicodeToChar(text) {
  }
 
 function activate(context) {
-	console.log('Congratulations, your extension "udecoder" is now active!');
 	let disposable = vscode.commands.registerCommand('udecoder.decode', function () {
 		GetSelectedText();
 	});
