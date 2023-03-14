@@ -8,9 +8,7 @@ async function GetSelectedText() {
 	let decoded = unicodeToChar(text);
 	decorations.push(editor.selection)
 
-	let style = vscode.window.createTextEditorDecorationType({ color: "white", backgroundColor: "#cf6a87" });
-	editor.setDecorations(style, decorations);
-
+	
 	editor.edit(function (editBuilder) {
 		editBuilder.replace(editor.selection, decoded);
 	});
